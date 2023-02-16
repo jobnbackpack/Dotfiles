@@ -6,6 +6,8 @@ if type -q exa
   alias ll "exa -l -g --icons"
   alias lla "ll -a"
 end
+# for wsl only
+# alias git git.exe
 alias g git
 alias lg lazygit
 command -qv nvim && alias vim /opt/homebrew/opt/neovim/bin/nvim
