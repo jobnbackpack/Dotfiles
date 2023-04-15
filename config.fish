@@ -10,6 +10,7 @@ end
 # alias git git.exe
 alias g git
 alias lg lazygit
+alias tx tmuxifier
 command -qv nvim && alias vim /opt/homebrew/opt/neovim/bin/nvim
 alias todo "cd ~/Dropbox/org/ && vim agenda.org"
 
@@ -25,5 +26,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 # starship init fish | source
-set -gx PATH "/Users/jobnbackpack/.tmuxifier/bin" $PATH
+set -gx PATH "$HOME/.tmux/plugins/tmuxifier/bin" $PATH
 eval (tmuxifier init - fish)
+alias tx tmuxifier
