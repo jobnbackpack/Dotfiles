@@ -20,7 +20,7 @@ function fish_greeting
   neofetch
 end
 
-set -g theme_color_scheme nord
+set -g theme_color_scheme zenburn
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
