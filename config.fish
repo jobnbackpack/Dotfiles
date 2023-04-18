@@ -39,4 +39,5 @@ set --export M2_HOME /opt/maven
 set --export RUST_HOME /home/rjanzen/.cargo/bin
 set --export NVM_HOME /home/rjanzen/.nvm
 set --export NODE_HOME /home/rjanzen/.nvm/versions/node/v19.9.0/bin
-set -gx PATH $NODE_HOME $NVIM_HOME $RUST_HOME $NVM_HOME $M2_HOME $JAVA_HOME $PATH
+set --export DENO_HOME /home/rjanzen/.deno/bin
+set -gx PATH $NODE_HOME $NVIM_HOME $RUST_HOME $DENO_HOME $NVM_HOME $M2_HOME $JAVA_HOME $PATH
