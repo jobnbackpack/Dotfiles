@@ -3,21 +3,21 @@
 
 # aliases
 if type -q exa
-  alias ll "exa -l -g --icons"
-  alias lla "ll -a"
+    alias ll "exa -l -g --icons"
+    alias lla "ll -a"
 end
 # for wsl only
 # alias git git.exe
 alias g git
 alias lg lazygit
 alias tx tmuxifier
-command -qv nvim && alias vim /opt/homebrew/opt/neovim/bin/nvim
+command -qv nvim && alias vim /opt/homebrew/opt/nvim/bin/nvim
 alias todo "cd ~/Dropbox/org/ && vim agenda.org"
 
 set -gx EDITOR nvim
 
 function fish_greeting
-  neofetch
+    neofetch
 end
 
 set -g theme_color_scheme zenburn
