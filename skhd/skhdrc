@@ -1,0 +1,13 @@
+# Float / Unfloat window: llalt - space
+lalt - space : yabai -m window --toggle float; sketchybar --trigger window_focus
+
+lctrl + alt - n: yabai -m space -focus next || yabai -m space --focus first
+lctrl + alt - p: yabai -m space -focus prev || yabai -m space --focus last
+
+## Misc
+# Open new wezterm window
+lalt - t : wezterm
+
+# Toggle sketchybar
+shift + lalt - space : sketchybar --bar hidden=toggle
+shift + lalt - r : sketchybar --remove '/.*/' && sh -c 'export CONFIG_DIR=$HOME/.config/sketchybar && $CONFIG_DIR/sketchybarrc'
