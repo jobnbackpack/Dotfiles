@@ -27,5 +27,6 @@ if status is-interactive
 end
 # starship init fish | source
 set -gx PATH "$HOME/.tmux/plugins/tmuxifier/bin" $PATH
+set -gx PATH "/Applications/WezTerm.app/Contents/MacOS" $PATH
 eval (tmuxifier init - fish)
 alias tx tmuxifier
