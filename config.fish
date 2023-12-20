@@ -11,6 +11,7 @@ alias lzd lazydocker
 
 switch (uname)
     case Linux
+        echo Linux
         command -qv nvim && alias vim nvim
         # display path var for WSL rendering in windows
         export DISPLAY=:0
@@ -35,9 +36,12 @@ switch (uname)
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
         set -gx PATH "$HOME/dotfiles" $PATH
     case Darwin
+        echo MacOS
         command -qv nvim && alias vim /opt/homebrew/opt/neovim/bin/nvim
         set -gx PATH "/Applications/WezTerm.app/Contents/MacOS" $PATH
         set -gx PATH "$HOME/Developer/dotfiles" $PATH
+    case *
+        echo other
 end
 zoxide init fish | source
 
