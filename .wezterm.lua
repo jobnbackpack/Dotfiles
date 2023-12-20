@@ -17,7 +17,7 @@ end
 -- This is where you actually apply your config choices
 
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.8
 config.use_fancy_tab_bar = false
 
 -- config.default_prog = { "wsl" }
@@ -31,8 +31,9 @@ config.wsl_domains = {
 	},
 }
 config.default_domain = "WSL:Ubuntu"
-config.color_scheme = "Terminal Dark (Gogh)"
+config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font_size = 18
 config.window_frame = {
 	-- The font used in the tab bar.
 	-- Roboto Bold is the default; this font is bundled
