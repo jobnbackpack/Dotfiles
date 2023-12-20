@@ -17,6 +17,8 @@ end
 
 set -g theme_color_scheme zenburn
 
+bind \cf tmux-sessionizer
+
 set -gx PATH "$HOME/.tmux/plugins/tmuxifier/bin" $PATH
 set -gx PATH "/Applications/WezTerm.app/Contents/MacOS" $PATH
 set -gx PATH "$HOME/Developer/dotfiles" $PATH
