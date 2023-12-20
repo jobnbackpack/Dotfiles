@@ -1,18 +1,14 @@
-# let fish_greeting "Let's go.."
-# theme
-
 # aliases
 if type -q exa
     alias ll "exa -l -g --icons"
     alias lla "ll -a"
 end
-# for wsl only
-# alias git git.exe
 alias g git
 alias lg lazygit
 alias tx 'tmuxifier load-session'
 alias pn pnpm
 alias lzd lazydocker
+
 switch (uname)
     case Linux
         command -qv nvim && alias vim nvim
@@ -37,8 +33,11 @@ switch (uname)
         # pnpm end
         # homebrew
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        set -gx PATH "$HOME/dotfiles" $PATH
     case Darwin
         command -qv nvim && alias vim /opt/homebrew/opt/neovim/bin/nvim
+        set -gx PATH "/Applications/WezTerm.app/Contents/MacOS" $PATH
+        set -gx PATH "$HOME/Developer/dotfiles" $PATH
 end
 zoxide init fish | source
 
@@ -49,6 +48,8 @@ function fish_greeting
 end
 
 set -g theme_color_scheme zenburn
+
+bind \cf tmux-sessionizer
 
 set -gx PATH "$HOME/.tmux/plugins/tmuxifier/bin" $PATH
 eval (tmuxifier init - fish)
