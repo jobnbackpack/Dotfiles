@@ -1,13 +1,20 @@
 return {
   {
-    "craftzdog/solarized-osaka.nvim",
+    -- "craftzdog/solarized-osaka.nvim",
+    "catppuccin/nvim",
     lazy = true,
     priority = 1000,
-    opts = function()
-      return {
-        transparent = true,
-      }
+    name = "catppuccin",
+    config = function()
+      require("catppuccin").setup({
+        flavor = "latte",
+        transparent_background = true,
+        no_italic = false, -- Force no italic
+        no_bold = false, -- Force no bold
+        no_underline = false,
+      })
     end,
+    opts = {},
   },
   -- add gruvbox
   -- { "ellisonleao/gruvbox.nvim", opts = {
@@ -18,7 +25,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      -- colorscheme = "solarized-osaka",
+      colorscheme = "catppuccin",
     },
   },
 }

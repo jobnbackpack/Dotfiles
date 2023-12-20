@@ -41,6 +41,7 @@ switch (uname)
         command -qv nvim && alias vim /opt/homebrew/opt/neovim/bin/nvim
         set -gx PATH "/Applications/WezTerm.app/Contents/MacOS" $PATH
         set -gx PATH "$HOME/Developer/dotfiles" $PATH
+        starship init fish | source
     case *
         echo other
 end
