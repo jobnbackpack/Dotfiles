@@ -30,12 +30,15 @@ config.wsl_domains = {
 		distribution = "Ubuntu",
 		username = "rjanzen",
 		default_cwd = "/home/rjanzen/",
+config.color_scheme = "Catppuccin Mocha"
+config.color_schemes = {
+	["Catppuccin Mocha"] = {
+		background = "black",
 	},
 }
 config.default_domain = "WSL:Ubuntu"
-config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 18
+config.font_size = 16
 config.window_frame = {
 	-- The font used in the tab bar.
 	-- Roboto Bold is the default; this font is bundled
