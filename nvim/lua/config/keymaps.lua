@@ -85,3 +85,5 @@ end)
 keymap.set("n", "<leader>s", function()
   ui.nav_file(4)
 end)
+
+keymap.set("n", "<C-f>", ":!tmux neww tmux-sessionizer<CR>")
