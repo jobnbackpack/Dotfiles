@@ -36,6 +36,7 @@ switch (uname)
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
         set -gx PATH "$HOME/dotfiles" $PATH
         zoxide init fish | source
+        starship init fish | source
     case Darwin
         echo MacOS
         command -qv nvim && alias vim /opt/homebrew/opt/neovim/bin/nvim
