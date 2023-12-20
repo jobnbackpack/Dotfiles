@@ -30,6 +30,10 @@ config.wsl_domains = {
 		distribution = "Ubuntu",
 		username = "rjanzen",
 		default_cwd = "/home/rjanzen/",
+config.color_scheme = "Catppuccin Mocha"
+config.color_schemes = {
+	["Catppuccin Mocha"] = {
+		background = "black",
 	},
 }
 config.default_domain = "WSL:Ubuntu"
