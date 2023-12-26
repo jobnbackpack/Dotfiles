@@ -30,13 +30,20 @@ config.wsl_domains = {
 		distribution = "Ubuntu",
 		username = "rjanzen",
 		default_cwd = "/home/rjanzen/",
-config.color_scheme = "Catppuccin Mocha"
-config.color_schemes = {
-	["Catppuccin Mocha"] = {
-		background = "black",
+-- config.color_schemes = {
+-- 	["Catppuccin Mocha"] = {
+-- 		background = "black",
+-- 	},
+-- }
+config.colors = {
+	background = "black",
+	tab_bar = {
+		-- The color of the inactive tab bar edge/divider
+		inactive_tab_edge = "#575757",
 	},
 }
 config.default_domain = "WSL:Ubuntu"
+config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 16
 config.window_frame = {
@@ -61,12 +68,6 @@ config.window_frame = {
 	inactive_titlebar_bg = "#333333",
 }
 
-config.colors = {
-	tab_bar = {
-		-- The color of the inactive tab bar edge/divider
-		inactive_tab_edge = "#575757",
-	},
-}
 
 config.keys = {
 	{ key = "V", mods = "CTRL", action = act.PasteFrom("Clipboard") },
