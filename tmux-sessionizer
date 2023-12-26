@@ -4,7 +4,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	session=$(find ~ ~/Projects/ -mindepth 1 -maxdepth 1 -type d | fzf)
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	# Mac OSX
-	session=$(find ~ ~/Projects/ ~/Developer/ ~/Developer/Projects/ -mindepth 1 -maxdepth 1 -type d | fzf)
+	session=$(find ~ ~/Developer/ ~/Developer/Projects/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 session_name=$(basename "$session" | tr . _)
 
