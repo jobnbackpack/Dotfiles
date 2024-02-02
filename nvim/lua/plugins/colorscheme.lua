@@ -7,7 +7,7 @@ return {
     name = "catppuccin",
     config = function()
       require("catppuccin").setup({
-        flavor = "latte",
+        flavor = "mocha",
         transparent_background = true,
         no_italic = false, -- Force no italic
         no_bold = false, -- Force no bold
