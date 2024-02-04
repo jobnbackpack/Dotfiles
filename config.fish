@@ -53,8 +53,6 @@ function fish_greeting
     test (uname) = Darwin; and neofetch
 end
 
-set -g theme_color_scheme zenburn
-
 bind \cf tmux-sessionizer
 
 set -gx PATH "$HOME/.tmux/plugins/tmuxifier/bin" $PATH
