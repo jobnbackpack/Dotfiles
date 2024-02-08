@@ -16,6 +16,15 @@ return {
     end,
     opts = {},
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+    name = "colorizer",
+    config = function()
+      require("colorizer").setup({
+        "*",
+      }, { rgb_fn = true, hsl_fn = true })
+    end,
+  },
   -- add gruvbox
   -- { "ellisonleao/gruvbox.nvim", opts = {
   --   transparent = true,
