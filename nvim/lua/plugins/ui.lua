@@ -11,6 +11,10 @@ return {
       })
 
       opts.presets.lsp_doc_border = true
+      opts.cmdline = {
+        enabled = true,
+        view = "cmdline",
+      }
     end,
   },
 

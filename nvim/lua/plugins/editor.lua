@@ -1,5 +1,16 @@
 return {
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      window = {
+        mappings = {
+          ["S"] = "noop",
+          ["s"] = "noop",
+        },
+      },
+    },
+  },
+  {
     enabled = false,
     "folke/flash.nvim",
     ---@type Flash.Config
@@ -108,7 +119,7 @@ return {
         desc = "Resume the previous telescope picker",
       },
       {
-        "<leader>fe",
+        "<leader>fd",
         function()
           local builtin = require("telescope.builtin")
           builtin.diagnostics()
