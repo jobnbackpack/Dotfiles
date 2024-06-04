@@ -6,10 +6,10 @@ JAVA_HOME="/opt/jdk-17.0.2"
 GO_HOME="/usr/local/go"
 M2_HOME="/opt/maven"
 MAVEN_HOME="/opt/maven"
-NVM_HOME="/home/rqanzen/.nvm"
+NVM_HOME="/home/rjanzen/.nvm"
 NODE_HOME="/home/rjanzen/.nvm/versions/node/v20.4.0/bin"
 RUST_HOME="/home/rjanzen/.cargo/bin"
-PNPM_HOME="/home/rjanzen/.local/share/pnpm"
+export PNPM_HOME="/home/rjanzen/.local/share/pnpm"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export PATH="$DOTFILES:$JAVA_HOME:$GO_HOME:$GO_HOME/bin:$M2_HOME:$MAVEN_HOME:$NVM_HOME:$RUST_HOME:$PNPM_HOME:$PATH"
@@ -129,3 +129,10 @@ bindkey -s "^f" "tmux-sessionizer^M"
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# bun completions
+[ -s "/home/rjanzen/.bun/_bun" ] && source "/home/rjanzen/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -17,6 +17,7 @@ return {
         "java",
         "javascript",
         "typescript",
+        "tsx",
         "php",
         "rust",
         "scss",
