@@ -9,10 +9,11 @@ MAVEN_HOME="/opt/maven"
 NVM_HOME="/home/rjanzen/.nvm"
 NODE_HOME="/home/rjanzen/.nvm/versions/node/v20.4.0/bin"
 RUST_HOME="/home/rjanzen/.cargo/bin"
+NVIM_HOME="/opt/nvim-linux64/bin"
 export PNPM_HOME="/home/rjanzen/.local/share/pnpm"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-export PATH="$DOTFILES:$JAVA_HOME:$GO_HOME:$GO_HOME/bin:$M2_HOME:$MAVEN_HOME:$NVM_HOME:$RUST_HOME:$PNPM_HOME:$PATH"
+export PATH="$DOTFILES:$JAVA_HOME:$GO_HOME:$GO_HOME/bin:$M2_HOME:$MAVEN_HOME:$NVM_HOME:$RUST_HOME:$PNPM_HOME:$NVIM_HOME:$PATH"
 
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
