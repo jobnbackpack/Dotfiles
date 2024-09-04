@@ -1,19 +1,19 @@
 PATH=/bin:/usr/bin:/usr/local/bin:/opt/homebrew/bin:{$PATH}
 
-REPOS="/home/rjanzen/Projects"
-DOTFILES="/home/rjanzen/dotfiles"
-JAVA_HOME="/opt/jdk-17.0.2"
-GO_HOME="/usr/local/go"
-M2_HOME="/opt/maven"
-MAVEN_HOME="/opt/maven"
-NVM_HOME="/home/rjanzen/.nvm"
-NODE_HOME="/home/rjanzen/.nvm/versions/node/v20.4.0/bin"
-RUST_HOME="/home/rjanzen/.cargo/bin"
-NVIM_HOME="/opt/nvim-linux64/bin"
-export PNPM_HOME="/home/rjanzen/.local/share/pnpm"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export REPOS="/Users/jobnbackpack/Developer/Projects"
+export DOTFILES="/Users/jobnbackpack/Developer/dotfiles/"
+export JAVA_HOME="/opt/jdk-17.0.2"
+export M2_HOME="/opt/maven"
+export MAVEN_HOME="/opt/maven"
+export GOPATH="/Users/jobnbackpack/go/"
+FLUTTER="/Users/jobnbackpack/Developer/flutter/flutter/bin"
+# export NVM_HOME="/Users/jobnbackpack/.nvm"
+# export NODE_HOME="/home/rjanzen/.nvm/versions/node/v20.4.0/bin"
+# export RUST_HOME="/home/rjanzen/.cargo/bin"
+# export PNPM_HOME="/home/rjanzen/.local/share/pnpm"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-export PATH="$DOTFILES:$JAVA_HOME:$GO_HOME:$GO_HOME/bin:$M2_HOME:$MAVEN_HOME:$NVM_HOME:$RUST_HOME:$PNPM_HOME:$NVIM_HOME:$PATH"
+export PATH="$GOPATH:$GOPATH/bin:$DOTFILES:$JAVA_HOME:$M2_HOME:$FLUTTER:$MAVEN_HOME:$NVM_HOME:$RUST_HOME:$PNPM_HOME:$PATH"
 
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -129,10 +129,11 @@ bindkey -s "^f" "tmux-sessionizer^M"
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
-source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # bun completions
-[ -s "/home/rjanzen/.bun/_bun" ] && source "/home/rjanzen/.bun/_bun"
+[ -s "/Users/jobnbackpack/.bun/_bun" ] && source "/Users/jobnbackpack/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
