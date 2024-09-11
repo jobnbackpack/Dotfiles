@@ -47,7 +47,7 @@ config.colors = {
 }
 config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 16
+config.font_size = 19
 config.window_frame = {
 	-- The font used in the tab bar.
 	-- Roboto Bold is the default; this font is bundled

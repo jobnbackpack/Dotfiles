@@ -1,19 +1,21 @@
 PATH=/bin:/usr/bin:/usr/local/bin:/opt/homebrew/bin:{$PATH}
 
-export REPOS="/Users/jobnbackpack/Developer/Projects"
-export DOTFILES="/Users/jobnbackpack/Developer/dotfiles/"
-export JAVA_HOME="/opt/jdk-17.0.2"
+export REPOS="~/Developer/Projects"
+export DOTFILES="~/Developer/dotfiles"
+export JAVA_HOME="/Users/RJanzen/.sdkman/candidates/java/current/bin/java"
 export M2_HOME="/opt/maven"
 export MAVEN_HOME="/opt/maven"
-export GOPATH="/Users/jobnbackpack/go/"
-FLUTTER="/Users/jobnbackpack/Developer/flutter/flutter/bin"
+export GOPATH="/opt/homebrew/bin/go/"
+export DOCKER_HOST="unix://${HOME}/.colima/docker.sock"
+FLUTTER="~/Developer/flutter/flutter/bin"
+TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="/var/run/docker.sock"
 # export NVM_HOME="/Users/jobnbackpack/.nvm"
 # export NODE_HOME="/home/rjanzen/.nvm/versions/node/v20.4.0/bin"
 # export RUST_HOME="/home/rjanzen/.cargo/bin"
 # export PNPM_HOME="/home/rjanzen/.local/share/pnpm"
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-export PATH="$GOPATH:$GOPATH/bin:$DOTFILES:$JAVA_HOME:$M2_HOME:$FLUTTER:$MAVEN_HOME:$NVM_HOME:$RUST_HOME:$PNPM_HOME:$PATH"
+export PATH="$GOPATH:$GOPATH/bin:$DOTFILES:$JAVA_HOME:$M2_HOME:$FLUTTER:$MAVEN_HOME:$NVM_HOME:$RUST_HOME:$PNPM_HOME:$DOCKER_HOST:$TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE:$PATH"
 
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -122,9 +124,9 @@ alias lzd="lazydocker"
 alias dot="cd $DOTFILES"
 alias vault="cd ~/Nextcloud/jobnbackpack-vault/"
 alias pn="pnpm"
-alias ts="tmux-sessionizer"
+alias ts="~/Developer/dotfiles/tmux-sessionizer"
 
-bindkey -s "^f" "tmux-sessionizer^M"
+bindkey -s "^f" "~/Developer/dotfiles/tmux-sessionizer^M"
 
 
 # Load Angular CLI autocompletion.
@@ -133,8 +135,13 @@ bindkey -s "^f" "tmux-sessionizer^M"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # bun completions
-[ -s "/Users/jobnbackpack/.bun/_bun" ] && source "/Users/jobnbackpack/.bun/_bun"
+# [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export BUN_INSTALL="/opt/homebrew/bin/bun"
+export PATH="$BUN_INSTALL:$PATH"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
