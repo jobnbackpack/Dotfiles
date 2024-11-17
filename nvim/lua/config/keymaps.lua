@@ -32,4 +32,4 @@ keymap.set("x", "<leader>p", [["_dP]])
 --   harpoon:list():select(4)
 -- end)
 
-keymap.set("n", "<C-f>", ":!tmux neww tmux-sessionizer<CR>")
+keymap.set("n", "<C-f>", ":!tmux neww ~/Developer/dotfiles/tmux-sessionizer<CR>")
