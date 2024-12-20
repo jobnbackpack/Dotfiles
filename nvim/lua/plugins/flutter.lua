@@ -6,6 +6,10 @@ return {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim", -- optional for vim.ui.select
     },
-    config = true,
+    config = function()
+      require("flutter-tools").setup({
+        fvm = true,
+      })
+    end,
   },
 }
