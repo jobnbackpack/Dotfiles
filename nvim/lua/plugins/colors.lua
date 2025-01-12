@@ -12,10 +12,12 @@ return {
       })
     end,
   },
+
+  { "kepano/flexoki-neovim", name = "flexoki" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "flexoki-dark",
     },
   },
 }
